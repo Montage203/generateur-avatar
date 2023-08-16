@@ -96,3 +96,26 @@ document.getElementById("updateButton").addEventListener("click", () => {
   updateAvatar();
 });
 
+
+
+
+
+// Récupérer les éléments nécessaires
+const mobilePopup = document.getElementById("mobilePopup");
+const closePopupButton = document.getElementById("closePopup");
+
+// Vérifier si l'écran est de petite taille (mobile)
+if (window.innerWidth <= 767) {
+  // Ouvrir le pop-up lorsque la page se charge (pour la version mobile)
+  window.addEventListener("load", () => {
+    mobilePopup.style.display = "flex";
+  });
+
+  // Fermer le pop-up lorsque le bouton "Fermer" est cliqué
+  closePopupButton.addEventListener("click", () => {
+    mobilePopup.style.display = "none";
+  });
+} else {
+  // Si ce n'est pas un petit écran, masquer le pop-up
+  mobilePopup.style.display = "none";
+}
