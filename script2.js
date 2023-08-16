@@ -44,7 +44,7 @@ let size = "n";
 let headOnly = 0;
 
 // Avant la fonction updateAvatar()
-let originalTopPosition = 0; // Variable pour stocker la position verticale d'origine de l'avatar
+let originalTopPosition = 10; // Variable pour stocker la position verticale d'origine de l'avatar
 
 updateAvatar();
 
