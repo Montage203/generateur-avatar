@@ -1,64 +1,225 @@
-/* Réinitialisation de quelques styles par défaut */
-body, h1, h2, h3, p, ul, li {
-    margin: 0;
-    padding: 0;
-}
+/* Design & front-end by Marco Cuel (Bromarks)*/
+
+
 
 body {
-    background-color: #36393F; /* Couleur de fond du mode sombre de Discord */
-    color: #FFFFFF; /* Couleur du texte pour les éléments clairs */
+	background-color: #FFFFFF;
     font-family: 'Questrial', sans-serif;
 }
 
-.container {
-    padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
+:focus {outline: 0;}
+
+.clearfix {
+	clear: both;
 }
 
-.habbo-imager {
-    display: flex;
-    flex-wrap: wrap;
+.habbo-imager .esquerda {
+	width: 200px;
+	float: left;
 }
 
-.esquerda {
-    flex: 1;
-    margin-right: 20px;
+.habbo-imager .direita {
+	width: calc(100% - 210px);
+	float: right;
 }
 
-.direita {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.habbo-imager input, select {
+	background-color: #fff;
+	width: calc(100% - 100px);
+	height: 40px;
+	padding: 0 20px;
+	color: #666666;
+	margin-bottom: 10px;
+	border: none;
+	float: right;
+  border-radius: 0px 5px 5px 0px;
+	font-family: 'Questrial', sans-serif;
+	position: relative;
+  box-shadow: inset 0 -4px rgba(0,0,0,0.1), 0 0 0 1px rgba(0,0,0,0.25), 0 4px rgba(0,0,0,0.1);
 }
 
-/* Styles pour les champs de saisie et les sélecteurs */
-input, select, button {
-    background-color: #40444B; /* Couleur de fond des champs de saisie en mode sombre Discord */
-    color: #FFFFFF; /* Couleur du texte pour les champs de saisie et les boutons */
-    border: none;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    width: 100%;
+.habbo-imager select {
+	background-image: url(https://2.bp.blogspot.com/-YXLWWzMHa5E/Vztpjo0x8pI/AAAAAAAAFKQ/WS3OeDhZDx8H2AcBFa9FeX6WvZJb7GgHgCLcB/s1600/seta.png);
+	background-repeat: no-repeat;
+	background-position: calc(100% - 20px) center;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-appearance: none;
+	-moz-appearance: none;
 }
 
-button {
-    cursor: pointer;
+.habbo-imager select:before {
+	content: '';
+	width: 20px;
+	height: 20px;
+	background-color: red;
+	position: absolute;
+	right: 0;
+	top: 0;
 }
 
-/* Style de l'image d'avatar */
-#avatarImage {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-top: 20px;
+.habbo-imager input {
+	width: calc(100% - 140px);
 }
 
-/* Media query pour la réactivité */
-@media screen and (max-width: 600px) {
-    .esquerda, .direita {
-        flex: 1 100%;
-    }
+.habbo-imager .bc {
+	background-color: #FFFFFF;
+	border: none;
+	border-radius: 4px 4px;
+	width: 30px;
+	height: 30px;
+	float: left;
+	margin-left: 40px;
+	margin-right: 30px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+input[type="radio"]:before, input[type="checkbox"]:before {
+	width: 28px;
+	height: 28px;
+	content: '';
+	position: absolute;
+	top: 2px;
+	left: 1px;
+    color: #666666;
+}
+
+input[type="radio"]:checked:before {
+	content: "\f111";
+	font-family: "FontAwesome";
+	font-size: 16px;
+  font-weight: 900;
+	text-align: center;
+	margin-top: 4px;
+}
+
+input[type="checkbox"]:checked:before {
+	content: "\f00c";
+	font-family: "FontAwesome";
+	font-size: 16px;
+  font-weight: 900;
+	text-align: center;
+	margin-top: 4px;
+}
+
+.habbo-imager .tamanho {
+  background-color: #FFFFFF;
+  border: none;
+  border-radius: 5px 5px;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  float: left;
+  margin-left: 20px;
+  margin-right: 30px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.habbo-imager .botao {
+	background-color: #33a8a0;
+	border: none;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	font-size: 14px;
+	color: #FFFFFF;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+	float: left;
+	margin-bottom: 5px;
+	margin-left: 10px;
+	box-shadow: inset 0 -4px rgba(0,0,0,0.1), 0 0 0 1px rgba(0,0,0,0.25), 0 4px rgba(0,0,0,0.1);
+  border-radius: 5px;
+}
+
+.habbo-imager .botao i {
+	margin-top: 12px;
+}
+
+.habbo-imager .m-g {
+	line-height: 40px;
+	width: 80px;
+	text-align: center;
+}
+
+.habbo-imager .botao.btn-r {
+	float: right;
+	margin-right: 10px;
+}
+
+.habbo-imager .cabeca {
+	background-color: #FFF;
+	border: none;
+	width: 30px;
+	height: 30px;
+	float: left;
+  padding: 5px;
+	margin-left: 40px;
+	margin-right: 30px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+.habbo-imager .msg {
+	float: left;
+	color: #999999;
+	line-height: 34px;
+	margin-left: 10px;
+}
+
+.habbo-imager .info {
+	background-color: #303640;
+  border-radius: 5px 0px 0px 5px;
+	width: 80px;
+	padding: 0 10px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	box-shadow: inset 0 -3px rgba(0,0,0,0.1), inset 0 0 30px rgba(0,0,0,0.2), 3px 0 3px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 10;
+	margin-bottom: 10px;
+	float: left;
+    font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	color: #FFFFFF;
+	text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  box-shadow: inset 0 -4px rgba(0,0,0,0.1), 0 0 0 1px rgba(0,0,0,0.25), 0 4px rgba(0,0,0,0.1);
+}
+
+.habbo-imager .info.hotel {
+	background-image: url(https://3.bp.blogspot.com/-P5GY4qoYEYg/VztpjlW_egI/AAAAAAAAFKU/4XGGDKkzDFMhjAxZ1TZ4_C4PeOdjMFA2wCLcB/s1600/hotel.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 20px;
+}
+
+.habbo-imager select.hotel {
+	width: calc(100% - 40px);
+}
+
+.habbo-imager .habbo {
+	background-color: #ff;
+    background-image: url(https://i.imgur.com/PAIFiy5.png);
+	height: 236px;
+  border-radius: 5px;
+	position: relative;
+  box-shadow: inset 0 -4px rgba(0,0,0,0.1), 0 0 0 1px rgba(0,0,0,0.25), 0 4px rgba(0,0,0,0.1);
+	margin-bottom: 7px;
+}
+
+.habbo-imager .habbo img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#bb {
+	display: none;
 }
