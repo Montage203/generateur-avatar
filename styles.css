@@ -1,0 +1,64 @@
+/* Réinitialisation de quelques styles par défaut */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #36393F; /* Couleur de fond du mode sombre de Discord */
+    color: #FFFFFF; /* Couleur du texte pour les éléments clairs */
+    font-family: 'Questrial', sans-serif;
+}
+
+.container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.habbo-imager {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.esquerda {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.direita {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styles pour les champs de saisie et les sélecteurs */
+input, select, button {
+    background-color: #40444B; /* Couleur de fond des champs de saisie en mode sombre Discord */
+    color: #FFFFFF; /* Couleur du texte pour les champs de saisie et les boutons */
+    border: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    width: 100%;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* Style de l'image d'avatar */
+#avatarImage {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* Media query pour la réactivité */
+@media screen and (max-width: 600px) {
+    .esquerda, .direita {
+        flex: 1 100%;
+    }
+}
