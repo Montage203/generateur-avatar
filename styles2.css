@@ -207,6 +207,8 @@ body { margin: 0; display: grid; place-items: center; background: black;}
 
 
 .controls {
+      width: 100%;
+    place-content: center;
   position: fixed;
   bottom: 0;
   display: flex;
