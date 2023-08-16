@@ -34,8 +34,9 @@ tiles.forEach(tile => {
 const pseudoInput = document.getElementById("pseudoInput");
 const avatarImg = document.querySelector(".avatar img");
 
-pseudoInput.addEventListener("input", () => {
+pseudoInput.addEventListener("keyup", () => {
   const newPseudo = pseudoInput.value;
   const avatarUrl = `https://api.habbocity.me/avatar_image.php?user=${encodeURIComponent(newPseudo)}&action=std&size=n&head_direction=2&direction=2&gesture=std&headonly=0`;
   avatarImg.src = avatarUrl;
 });
+
