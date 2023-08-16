@@ -43,8 +43,6 @@ let gesture = "std";
 let size = "n";
 let headOnly = 0;
 
-// Avant la fonction updateAvatar()
-let originalTopPosition = none; // Variable pour stocker la position verticale d'origine de l'avatar
 
 updateAvatar();
 
@@ -53,14 +51,6 @@ function updateAvatar() {
     pseudoInput.value
   )}&action=${action}&direction=${direction}&head_direction=${headDirection}&gesture=${gesture}&size=${size}&headonly=${headOnly}`;
   avatarImg.src = avatarUrl;
-
-    // Ajustement de la position verticale en cas d'action "sit"
-  if (action === "sit") {
-    originalTopPosition = parseInt(avatar.style.top);
-    avatar.style.top = originalTopPosition + 5 + "px"; // Ajustez le nombre de pixels selon vos besoins
-  } else {
-    avatar.style.top = originalTopPosition + "px"; // Réinitialise la position verticale si l'action n'est pas "sit"
-  }
 }
 
 
