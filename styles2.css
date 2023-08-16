@@ -202,3 +202,33 @@ body { margin: 0; display: grid; place-items: center; background: black;}
   transform: translate(-50%, -50%);
   top: calc(50% - 10px); left: 50%;
 }
+
+
+
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+#actionSelect,
+#directionSelect,
+/* Ajoutez d'autres sélecteurs pour les autres menus déroulants ici */ {
+  padding: 5px;
+}
+
+#updateButton {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
