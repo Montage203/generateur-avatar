@@ -93,3 +93,21 @@ headOnlySelect.addEventListener("change", () => {
 document.getElementById("updateButton").addEventListener("click", () => {
   updateAvatar();
 });
+
+
+const downloadButton = document.getElementById("downloadButton");
+
+downloadButton.addEventListener("click", () => {
+  const downloadFormat = document.getElementById("downloadFormat").value;
+
+  // Votre code pour le téléchargement ici
+  downloadAvatar(downloadFormat);
+});
+
+function downloadAvatar(format) {
+  const avatarUrl = avatarImg.src;
+  const link = document.createElement("a");
+  link.href = avatarUrl;
+  link.download = `avatar.${format}`;
+  link.click();
+}
