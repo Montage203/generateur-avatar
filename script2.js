@@ -32,13 +32,10 @@ tiles.forEach(tile => {
 // Ajoutez ces lignes à la fin de votre script2.js
 
 const pseudoInput = document.getElementById("pseudoInput");
-const pseudoBtn = document.getElementById("pseudoBtn");
+const avatarImg = document.querySelector(".avatar img");
 
-pseudoBtn.addEventListener("click", () => {
+pseudoInput.addEventListener("input", () => {
   const newPseudo = pseudoInput.value;
-  if (newPseudo) {
-    const avatarImg = document.querySelector(".avatar img");
-    const avatarUrl = `https://api.habbocity.me/avatar_image.php?user=${encodeURIComponent(newPseudo)}&action=std&size=n&head_direction=2&direction=2&gesture=std&headonly=0`;
-    avatarImg.src = avatarUrl;
-  }
+  const avatarUrl = `https://api.habbocity.me/avatar_image.php?user=${encodeURIComponent(newPseudo)}&action=std&size=n&head_direction=2&direction=2&gesture=std&headonly=0`;
+  avatarImg.src = avatarUrl;
 });
