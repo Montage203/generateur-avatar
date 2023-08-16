@@ -1,61 +1,204 @@
-html,
-body {
-  background: #212226;
-  color: #fff;
-  font-family: 'Ubuntu Condensed';
-  margin: 0;
+body, html { height: 100%; }
+body { margin: 0; display: grid; place-items: center; background: black;}
+
+.room {
+  --door-tile: 4;
+  --wall-width: 15px;
+  --wall-height: 175px;
+  --block-size: 55px;
+  
+  --room-horizontal-rows: 6;
+  --room-vertical-rows: 8;
+  
+  position: relative;
 }
-.dashboard:not(.habbo__disabled) {
-  background: #1e1e20;
-  width: 100%;
-  position: fixed;
+
+.door {
+  position: relative;
+  background: black;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.room .y-wall .door {
+  top: calc(var(--door-tile) * var(--block-size));
+  height: var(--block-size);
+  width: 75%;
+}
+
+.room .y-wall .door:before {
+  top: 25px;
+  left: 78px;
+  width: var(--block-size); height: var(--block-size);
+  transform: skewY(-45deg);
+}
+
+.room .x-wall .door:before {
   bottom: 0;
+  left: 28px;
+  width: var(--block-size); height: var(--block-size);
+  transform: skewX(-45deg);
 }
-.habbo__input {
-  font-family: 'Ubuntu Condensed';
-  border-radius: 4px;
-  box-shadow: 0 1px 0 #828181 inset;
+
+.room .x-wall .door {
+  left: calc(var(--tile) * var(--block-size));
+  height: 75%;
+  width: var(--block-size);
 }
-.habbo__outline {
-  -webkit-filter: drop-shadow(0 1px 0 #fff) drop-shadow(0 -1px 0 #fff) drop-shadow(1px 0 0 #fff) drop-shadow(-1px 0 0 #fff) drop-shadow(0 0 10px rgba(0,0,0,0));
+
+.door:hover:before {
+  outline: 3px dashed white;
+  outline-offset: -3px;
 }
-.habbo__wallet:not(.habbo__disabled) {
-  height: 50px;
-}
-.habbo__wallet:not(.habbo__disabled) .uk-navbar-center {
-  background: #1c1d21;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-.habbo__wallet:not(.habbo__disabled) .uk-navbar-nav > li > a {
-  font-family: 'Ubuntu Condensed';
-  font-weight: 800;
-}
-.habbo__button__action {
-  background: #111214;
-  border-radius: 5px;
-}
-.habbo__information {
-  width: 15vw;
-  right: 0.5vw;
-  bottom: 85px;
-  border-radius: 4px;
+
+.door:before {
+  content: '';
   position: absolute;
-  background: #1c1d1f;
-  color: #fff;
+  background: #8F8B5D;
+  outline: 1px solid #858255;
+  outline-offset: -1px;
 }
-.habbo__information h6 {
-  color: #fff;
-  font-weight: 500;
+
+.room .y-wall {
+  display: flex;
+  justify-content: flex-end;
+  
+  position: absolute;
+  right: 100%;
+  
+  height: 100%;
+  width: var(--wall-height);
+  background: #878892;
+  
+  transform: skewY(45deg) translateY(calc(var(--wall-height) / 2 * -1));
 }
-.habbo__information .uk-card-header {
-  padding: 10px 25px;
-  border-bottom: 3px solid #191a1c;
+
+.room .y-wall:before {
+  content: "";
+  position: absolute;
+  height: var(--wall-width);
+  width: calc(100% + var(--wall-width));
+  background: #ACB1C1;
+  top: 100%;
+  right: calc(var(--wall-width) / 2 * -1);
+  transform: skewX(-45deg);
 }
-.habbo__information .uk-card-body {
-  padding: 20px 25px;
+
+.room .y-wall:after {
+  content: "";
+  position: absolute;
+  height: calc(100% + var(--wall-width));
+  width: var(--wall-width);
+  background: #66676F;
+  right: 100%;
+  bottom: calc(var(--wall-width) / 2 * -1);
+  transform: skewY(-45deg);
 }
-.habbo__information .uk-card-footer {
-  padding: 10px 25px;
-  border-top: 3px solid #191a1c;
+
+
+.room .x-wall {
+  display: flex;
+  align-items: flex-end;
+  
+  position: absolute;
+  height: var(--wall-height);
+  bottom: 100%;
+  width: 100%;
+  background: #ACB1C1;
+  transform: skewX(45deg) translateX(calc(var(--wall-height) / 2 * -1));
+}
+
+.room .x-wall:before {
+  content: "";
+  position: absolute;
+  height: calc(100% + var(--wall-width));
+  width: var(--wall-width);
+  background: #878892;
+  left: 100%;
+  top: calc(var(--wall-width) / 2 * -1);
+  transform: skewY(-45deg);
+}
+
+.room .x-wall:after {
+  content: "";
+  position: absolute;
+  height: var(--wall-width);
+  width: calc(100% + var(--wall-width));
+  background: #66676F;
+  bottom: 100%;
+  left: calc(var(--wall-width) / 2 * -1);
+  transform: skewX(-45deg);
+}
+
+.room .floor {
+    display: grid;
+    width: calc(var(--block-size) * var(--room-horizontal-rows));
+    height: calc(var(--block-size) * var(--room-vertical-rows));
+
+    grid-template-columns: repeat(auto-fill, var(--block-size));
+    grid-template-rows: repeat(auto-fill, var(--block-size));
+}
+
+.isometric {
+    transform: translateZ(3em) rotateX(60deg) rotateZ(45deg);
+    transform-style: preserve-3d;
+}
+
+.block {
+    --side-size: 15px;
+
+    position: relative;
+    background: #8F8B5D;
+    outline: 1px solid #858255;
+    outline-offset: -1px;
+
+}
+
+.block:hover {
+    outline: 3px dashed white;
+    outline-offset: -3px;
+    cursor: pointer;
+}
+
+.block:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    width: 100%; height: var(--side-size);
+    background: #6D6C47;
+    transform: skewX(45deg) translateX(calc(var(--side-size) / 2));
+}
+
+.block:before {
+    content: "";
+    position: absolute;
+    left: 100%;
+    width: var(--side-size); height: 100%;
+    background: #6D6C47;
+    transform: skewY(45deg) translateY(calc(var(--side-size) / 2));
+}
+
+/** Avatar */
+.avatar {
+  position: absolute;
+  transform: translate(-100%, -100%);
+  width: 40px; height: 90px;
+  z-index: 1;
+}
+
+.avatar::before {
+  content: "";
+  position: absolute;
+  bottom: 0; left: calc(50% + 5px);
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: rgba(0, 0, 0, .25);
+  width: 100%;
+  height: 20px;
+}
+
+.avatar img {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: calc(50% - 10px); left: 50%;
 }
