@@ -6,66 +6,109 @@
 <!-- Fim icons -->
 
 <!-- sur base du code : https://codepen.io/vkassiel/pen/bGVWjeo -->
+<div class="habbo-imager">
+	<div class="esquerda">
+		<div class="info hotel"></div>
+		<select id="hotel" name="hotel" class="hotel">
+			<option selected="selected" value="com.br">HabboCity</option>
+		</select>
 
+		<div class="clearfix"></div>
+	
+		<a id="img_link" target="_blank" href="https://api.habbocity.me/avatar_image.php?user=Niko&action=std&size=n&head_direction=2&direction=2&gesture=std&headonly=0">
+			<div class="habbo">
+				<img align='middle' alt="" id="img" src="https://api.habbocity.me/avatar_image.php?user=Niko&action=std&size=n&head_direction=2&direction=2&gesture=std&headonly=0">
+			</div>
+		</a>
 
+		<div id="h_l" class="botao"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+		<div class="msg m-g">Cabeça</div>
+		<div id="h_r" class="botao btn-r"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
 
+		<div class="clearfix"></div>
 
-<br>
+		<div id="b_l" class="botao"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+		<div class="msg m-g">Corpo</div>
+		<div id="b_r" class="botao btn-r"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
 
-<div class="avatar"><img align='middle' alt="" id="img" src="https://api.habbocity.me/avatar_image.php?user=Niko&action=std&size=n&head_direction=2&direction=2&gesture=std&headonly=0"></div>
-<div class="room isometric">
-  <div class="x-wall"></div>
-  <div class="y-wall"><div class="door"></div></div>
-  <div class="floor">
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-  </div>
+	</div>
+
+	<div class="direita">
+		<div class="info">Pseudo</div>
+		<input id="usuario" placeholder="Niko" name="user" type="text">
+
+		<div class="info">Expressão</div>
+		<select id="rosto" name="rosto">
+			<option value="std">Normal</option>
+			<option value="spk">Falando</option>
+			<option value="sml">Sorrindo</option>
+			<option value="srp">Surpreso</option>
+			<option value="agr">Nervoso</option>
+			<option value="sad">Triste</option>
+			<option value="lol">Sem Rosto</option>
+		</select>
+
+		<div class="info">Ação</div>
+		<select id="acao" name="acao">
+			<option value="std">Normal</option>
+			<option value="wlk">Andando</option>
+			<option value="wlk,wav">Andando/Acenando</option>
+			<option value="sit">Sentado</option>
+			<option value="sit,wav">Sentado/Acenando</option>
+			<option value="lay">Deitado</option>
+			<option value="wav">Acenando</option>
+		</select>
+
+		<div class="msg" style="margin-right: 24px;">Tamanho:</div>
+		<input type="radio" name="tamanho" id="tamanho" class="tamanho" value="s">
+		<div class="msg" style="margin-right: 30px;">Pequeno</div>
+		<input type="radio" checked name="tamanho" id="tamanho" class="tamanho" value="n">
+		<div class="msg" style="margin-right: 30px;">Normal</div>
+		<input type="radio" name="tamanho" id="tamanho" class="tamanho" value="l">
+		<div class="msg">Grande</div>
+
+		<div class="clearfix"></div>
+
+		<div class="info">Objeto</div>
+		<select id="objeto" name="objeto">
+			<option value="">Nenhum</option>
+			<option value="0" >Nada (Objeto imaginário)</option>
+			<option value="1" >Água</option>
+			<option value="44" >Bebida Tóxica</option>
+			<option value="6" >Café</option>
+			<option value="2" >Cenoura</option>
+			<option value="42" >Chá Japonês</option>
+			<option value="667" >Coquetel</option>
+			<option value="5" >Habbo Refri</option>
+			<option value="9" >Poção do Amor</option>
+			<option value="3" >Sorvete</option>
+			<option value="33" >Sorvete (Callipo)</option>
+			<option value="43" >Suco de Tomate</option>
+		</select>
+
+		<div class="clearfix"></div>
+		<div id="bb">
+			<input type="checkbox" class="bc" name="bbcc" id="bbcc" value=",drk=">
+			<div class="msg">Bebendo/Comendo</div>
+		</div>
+		<div class="clearfix"></div>
+
+		<div class="info">URL</div>
+		<input type="text" id="url_img" value="https://api.habbocity.me/avatar_image.php?user=Niko&action=std&size=n&head_direction=2&direction=2&gesture=std&headonly=0"/>
+
+		<div class="info">Formato</div>
+		<select id="formato" name="formato">
+			<option value="png">PNG</option>
+			<option value="gif">GIF</option>
+		</select>
+
+		<div class="clearfix"></div>
+		<input style="border-radius: 5px;" type="checkbox" name="cabeca" class="cabeca" id="cabeca" value="1">
+		<div class="msg">Apenas cabeça</div>
+
+	</div>
 </div>
+
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/fontawesome.min.js"></script>
+<script src="script.js"></script>
