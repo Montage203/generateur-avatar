@@ -210,7 +210,6 @@ body { margin: 0; display: grid; place-items: center; background: black;}
   display: flex;
   align-items: center;
   justify-content: center; /* Pour centrer horizontalement les contrôles */
-  width: 100%;
   gap: 10px;
   padding: 10px; /* Espacement des bords inférieurs */
   background-color: rgba(0, 0, 0, 0.7); /* Fond semi-transparent */
