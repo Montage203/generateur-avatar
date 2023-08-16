@@ -207,10 +207,16 @@ body { margin: 0; display: grid; place-items: center; background: black;}
 
 
 .controls {
+  position: fixed;
+  bottom: 0;
   display: flex;
   align-items: center;
+  justify-content: center; /* Pour centrer horizontalement les contrôles */
+  width: 100%;
   gap: 10px;
-  margin-top: 20px;
+  padding: 10px; /* Espacement des bords inférieurs */
+  background-color: rgba(0, 0, 0, 0.7); /* Fond semi-transparent */
+  z-index: 2; /* Pour s'assurer que les contrôles sont au-dessus de tout */
 }
 
 #actionSelect,
