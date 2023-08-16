@@ -50,7 +50,13 @@ function updateAvatar() {
     pseudoInput.value
   )}&action=${action}&direction=${direction}&head_direction=${headDirection}&gesture=${gesture}&size=${size}&headonly=${headOnly}`;
   avatarImg.src = avatarUrl;
+
+    // Ajustement de la position verticale en cas d'action "sit"
+  if (action === "sit") {
+    avatar.style.top = parseInt(avatar.style.top) + 10 + "px"; // Ajustez le nombre de pixels selon vos besoins
+  }
 }
+
 
 pseudoInput.addEventListener("keyup", () => {
   updateAvatar();
