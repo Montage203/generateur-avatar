@@ -63,35 +63,36 @@
 
 
 <div class="controls">
-  <input type="text" id="pseudoInput" placeholder="Nouveau pseudo">
-</div>
-<div class="controls">
-  <button id="changeAction">Changer Action</button>
-  <select id="directionSelect">
-    <option value="0">Direction 0</option>
-    <option value="1">Direction 1</option>
-    <!-- ... Ajoutez les autres options de direction ici ... -->
-  </select>
-  <select id="headDirectionSelect">
-    <option value="0">Head Direction 0</option>
-    <option value="1">Head Direction 1</option>
-    <!-- ... Ajoutez les autres options de head_direction ici ... -->
-  </select>
-  <select id="gestureSelect">
-    <option value="std">Standard</option>
-    <option value="agr">Agree</option>
-    <!-- ... Ajoutez les autres options de gesture ici ... -->
-  </select>
-  <select id="sizeSelect">
-    <option value="n">Normal</option>
-    <option value="s">Small</option>
-    <!-- ... Ajoutez les autres options de size ici ... -->
-  </select>
-  <label>
-    <input type="checkbox" id="headOnlyCheckbox"> Head Only
-  </label>
-</div>
+    <input type="text" id="usuario" placeholder="Pseudo">
+    <select id="acao">
+      <option value="std">Standard</option>
+      <!-- Ajoutez d'autres options d'action ici -->
+    </select>
+    <select id="rosto">
+      <option value="std">Standard</option>
+      <!-- Ajoutez d'autres options de rosto (gesture) ici -->
+    </select>
+    <input type="text" id="objeto" placeholder="Objet">
+    <select id="formato">
+      <option value="png">PNG</option>
+      <option value="gif">GIF</option>
+      <!-- Ajoutez d'autres options de formato ici -->
+    </select>
+    <input type="checkbox" id="cabeca">
+    <label for="cabeca">Tête seulement</label>
+    <select name="tamanho">
+      <option value="n">Normal</option>
+      <option value="s">Small</option>
+      <!-- Ajoutez d'autres options de tamanho ici -->
+    </select>
+    <input type="radio" name="bbcc" value="bb">
+    <input type="radio" name="bbcc" value="cc">
+    <input type="button" id="h_l" value="Gauche">
+    <input type="button" id="h_r" value="Droite">
+    <input type="button" id="b_l" value="Gauche">
+    <input type="button" id="b_r" value="Droite">
+  </div>
 
 
-
+<script src="script.js"></script>
 <script src="script2.js"></script>
