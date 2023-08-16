@@ -53,7 +53,9 @@ function updateAvatar() {
 
     // Ajustement de la position verticale en cas d'action "sit"
   if (action === "sit") {
-    avatar.style.top = parseInt(avatar.style.top) + 50 + "px"; // Ajustez le nombre de pixels selon vos besoins
+    avatar.style.top = parseInt(avatar.style.top) + 100 + "px"; // Ajustez le nombre de pixels selon vos besoins
+  } else {
+    avatar.style.top = ""; // Réinitialise la position verticale si l'action n'est pas "sit"
   }
 }
 
