@@ -31,7 +31,10 @@ const pseudoInput = document.getElementById("pseudoInput");
 const avatarImg = document.querySelector(".avatar img");
 const actionSelect = document.getElementById("actionSelect");
 const directionSelect = document.getElementById("directionSelect");
-// Ajoutez des sélecteurs pour les autres éléments d'interface utilisateur (head_direction, gesture, size, headonly, etc.)
+const headDirectionSelect = document.getElementById("headDirectionSelect");
+const gestureSelect = document.getElementById("gestureSelect");
+const sizeSelect = document.getElementById("sizeSelect");
+const headOnlySelect = document.getElementById("headOnlySelect");
 
 let action = "std";
 let direction = 2;
@@ -53,7 +56,6 @@ pseudoInput.addEventListener("keyup", () => {
   updateAvatar();
 });
 
-// Ajoutez des écouteurs d'événements pour les changements d'options d'avatar (par exemple, boutons pour changer d'action, de direction, etc.)
 actionSelect.addEventListener("change", () => {
   action = actionSelect.value;
   updateAvatar();
@@ -63,6 +65,27 @@ directionSelect.addEventListener("change", () => {
   direction = parseInt(directionSelect.value);
   updateAvatar();
 });
+
+headDirectionSelect.addEventListener("change", () => {
+  headDirection = parseInt(headDirectionSelect.value);
+  updateAvatar();
+});
+
+gestureSelect.addEventListener("change", () => {
+  gesture = gestureSelect.value;
+  updateAvatar();
+});
+
+sizeSelect.addEventListener("change", () => {
+  size = sizeSelect.value;
+  updateAvatar();
+});
+
+headOnlySelect.addEventListener("change", () => {
+  headOnly = parseInt(headOnlySelect.value);
+  updateAvatar();
+});
+
 
 // Ajoutez des écouteurs d'événements pour les autres éléments d'interface utilisateur (head_direction, gesture, size, headonly, etc.)
 // Lorsque ces options changent, appelez simplement la fonction updateAvatar() pour mettre à jour l'avatar en conséquence.
