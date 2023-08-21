@@ -236,3 +236,26 @@ body { margin: 0; display: grid; place-items: center; background: black;}
 }
 
 
+.controls-container {
+   position: fixed;
+   top: 0;
+   left: -250px; /* Masqué par défaut */
+   width: 250px;
+   height: 100%;
+   background-color: #333;
+   color: white;
+   transition: left 0.3s ease-in-out;
+}
+
+#toggleControls {
+   position: fixed;
+   bottom: 20px;
+   left: 20px;
+   background-color: #333;
+   color: white;
+   border: none;
+   padding: 10px;
+   border-radius: 5px;
+   cursor: pointer;
+   z-index: 3;
+}
