@@ -96,3 +96,10 @@ document.getElementById("updateButton").addEventListener("click", () => {
   updateAvatar();
 });
 
+
+const toggleButton = document.getElementById("toggleControls");
+const controlsContainer = document.querySelector(".controls-container");
+
+toggleButton.addEventListener("click", () => {
+   controlsContainer.classList.toggle("open");
+});
