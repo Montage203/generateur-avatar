@@ -245,6 +245,13 @@ body { margin: 0; display: grid; place-items: center; background: black;}
    background-color: #333;
    color: white;
    transition: left 0.3s ease-in-out;
+/* Ajoutez ces propriétés pour ajuster l'affichage sur mobile */
+    @media (max-width: 768px) {
+        top: auto;
+        bottom: 0;
+        height: auto;
+        transform: translateY(100%);
+    }
 }
 
 #toggleControls {
@@ -258,6 +265,11 @@ body { margin: 0; display: grid; place-items: center; background: black;}
    border-radius: 5px;
    cursor: pointer;
    z-index: 3;
+@media (max-width: 768px) {
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
 
 
