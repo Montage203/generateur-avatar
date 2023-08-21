@@ -8,7 +8,7 @@ body, html { height: 100%; }
    --block-size: 55px; 
   
    --room-horizontal-rows: 8; 
-   --room-vertical-rows: 8; 
+   --room-vertical-rows: 6; 
   
    position: relative; 
  } 
