@@ -1,123 +1,119 @@
-
-<link rel="stylesheet" href="styles2.css">
-
-<!-- code de base https://codepen.io/melvinidema/pen/KKaYNLY -->
-
-<div class="avatar"><img src="https://api.habbocity.me/avatar_image.php?user=Niko&action=std&size=n&head_direction=2&direction=2&gesture=std&headonly=0" alt=""></div>
-<div class="room isometric">
-  <div class="x-wall"></div>
-  <div class="y-wall"><div class="door"></div></div>
-  <div class="floor">
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-  </div>
-</div>
-
-
-
-<div class="controls">
-  <input type="text" id="pseudoInput" placeholder="Pseudo" value="Niko">
+<link rel="stylesheet" href="styles2.css"> 
   
-  <select id="actionSelect">
-            <option value="std">Standard</option>
-            <option value="sit">Assis</option>
-            <option value="lay">Allongé</option>
-            <option value="wlk">Marche</option>
-            <option value="wav">Salut</option>
-            <option value="sit-wav">Assis et salut</option>
-            <option value="swm">Nage</option>
-        </select>
-        <select id="directionSelect">
-            <option value="0">Direction 0</option>
-            <option value="1">Direction 1</option>
-            <option value="2">Direction 2</option>
-            <option value="3">Direction 3</option>
-            <option value="4">Direction 4</option>
-            <option value="5">Direction 5</option>
-            <option value="6">Direction 6</option>
-            <option value="7">Direction 7</option>
-        </select>
-        <select id="headDirectionSelect">
-            <option value="0">Direction tête 0</option>
-            <option value="1">Direction tête 1</option>
-            <option value="2">Direction tête 2</option>
-            <option value="3">Direction tête 3</option>
-            <option value="4">Direction tête 4</option>
-            <option value="5">Direction tête 5</option>
-            <option value="6">Direction tête 6</option>
-            <option value="7">Direction tête 7</option>
-        </select>
-        <select id="gestureSelect">
-            <option value="std">Normal</option>
-            <option value="agr">En colère</option>
-            <option value="sml">Sourire</option>
-            <option value="sad">Triste</option>
-            <option value="srp">Soupire</option>
-            <option value="spk">Parler</option>
-            <option value="eyb">Clin d'œil</option>
-        </select>
-        <select id="sizeSelect">
-            <option value="n">Normal</option>
-            <option value="s">Petit</option>
-            <option value="l">Grand</option>
-        </select>
-        <select id="headOnlySelect">
-            <option value="0">Corps complet</option>
-            <option value="1">Tête seulement</option>
-        </select>
+ <!-- code de base https://codepen.io/melvinidema/pen/KKaYNLY --> 
   
-    </div>
-
-
-
-
-
-<script src="script2.js"></script>
+ <div class="avatar"><img src="https://api.habbocity.me/avatar_image.php?user=Niko&action=std&size=n&head_direction=2&direction=2&gesture=std&headonly=0" alt=""></div> 
+ <div class="room isometric"> 
+   <div class="x-wall"></div> 
+   <div class="y-wall"><div class="door"></div></div> 
+   <div class="floor"> 
+     <div class="block"></div> 
+     <div class="block"></div> 
+     <div class="block"></div> 
+     <div class="block"></div> 
+     <div class="block"></div> 
+     <div class="block"></div> 
+     <div class="block"></div> 
+     <div class="block"></div> 
+     <div class="block"></div> 
+     <div class="block"></div> 
+     <div class="block"></div> 
+     <div class="block"></div> 
+     <div class="block"></div> 
+     <div class="block"></div> 
+     <div class="block"></div> 
+     <div class="block"></div> 
+     <div class="block"></div> 
+     <div class="block"></div> 
+     <div class="block"></div> 
+     <div class="block"></div> 
+     <div class="block"></div> 
+     <div class="block"></div> 
+     <div class="block"></div> 
+     <div class="block"></div> 
+     <div class="block"></div> 
+     <div class="block"></div> 
+     <div class="block"></div> 
+     <div class="block"></div> 
+     <div class="block"></div> 
+     <div class="block"></div> 
+     <div class="block"></div> 
+     <div class="block"></div> 
+     <div class="block"></div> 
+     <div class="block"></div> 
+     <div class="block"></div> 
+     <div class="block"></div> 
+     <div class="block"></div> 
+     <div class="block"></div> 
+     <div class="block"></div> 
+     <div class="block"></div> 
+     <div class="block"></div> 
+     <div class="block"></div> 
+     <div class="block"></div> 
+     <div class="block"></div> 
+     <div class="block"></div> 
+     <div class="block"></div> 
+     <div class="block"></div> 
+     <div class="block"></div> 
+     <div class="block"></div> 
+     <div class="block"></div> 
+   </div> 
+ </div> 
+  
+  
+ <div class="controls"> 
+   <input type="text" id="pseudoInput" placeholder="Pseudo" value="Niko"> 
+  
+   <select id="actionSelect"> 
+             <option value="std">Standard</option> 
+             <option value="sit">Assis</option> 
+             <option value="lay">Allongé</option> 
+             <option value="wlk">Marche</option> 
+             <option value="wav">Salut</option> 
+             <option value="sit-wav">Assis et salut</option> 
+             <option value="swm">Nage</option> 
+         </select> 
+         <select id="directionSelect"> 
+             <option value="0">Direction 0</option> 
+             <option value="1">Direction 1</option> 
+             <option value="2">Direction 2</option> 
+             <option value="3">Direction 3</option> 
+             <option value="4">Direction 4</option> 
+             <option value="5">Direction 5</option> 
+             <option value="6">Direction 6</option> 
+             <option value="7">Direction 7</option> 
+         </select> 
+         <select id="headDirectionSelect"> 
+             <option value="0">Direction tête 0</option> 
+             <option value="1">Direction tête 1</option> 
+             <option value="2">Direction tête 2</option> 
+             <option value="3">Direction tête 3</option> 
+             <option value="4">Direction tête 4</option> 
+             <option value="5">Direction tête 5</option> 
+             <option value="6">Direction tête 6</option> 
+             <option value="7">Direction tête 7</option> 
+         </select> 
+         <select id="gestureSelect"> 
+             <option value="std">Normal</option> 
+             <option value="agr">En colère</option> 
+             <option value="sml">Sourire</option> 
+             <option value="sad">Triste</option> 
+             <option value="srp">Soupire</option> 
+             <option value="spk">Parler</option> 
+             <option value="eyb">Clin d'œil</option> 
+         </select> 
+         <select id="sizeSelect"> 
+             <option value="n">Normal</option> 
+             <option value="s">Petit</option> 
+             <option value="l">Grand</option> 
+         </select> 
+         <select id="headOnlySelect"> 
+             <option value="0">Corps complet</option> 
+             <option value="1">Tête seulement</option> 
+         </select> 
+  
+     </div> 
+  
+  
+  
+ <script src="script2.js"></script>
