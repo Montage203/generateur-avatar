@@ -7,8 +7,8 @@ body, html { height: 100%; }
    --wall-height: 175px; 
    --block-size: 55px; 
   
-   --room-horizontal-rows: 8; 
-   --room-vertical-rows: 6; 
+   --room-horizontal-rows: 6; 
+   --room-vertical-rows: 8; 
   
    position: relative; 
  } 
