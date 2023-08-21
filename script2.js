@@ -99,3 +99,40 @@ document.getElementById("updateButton").addEventListener("click", () => {
 
 
 
+
+  const messageInput = document.getElementById("messageInput");
+  const sendButton = document.getElementById("sendButton");
+  const chatContainer = document.querySelector(".chat-container");
+
+  sendButton.addEventListener("click", () => {
+  const message = messageInput.value.trim();
+  if (message !== "") {
+    const username = pseudoInput.value.trim();
+    const bubble = document.createElement("div");
+    bubble.classList.add("bubble");
+    bubble.innerHTML = `
+      <div class="bubble__username">${username}:</div>
+      <div class="bubble__message">${message}</div>
+    `;
+    chatContainer.appendChild(bubble);
+    messageInput.value = "";
+    animateBubble(bubble);
+  }
+});
+
+
+  function animateBubble(bubble) {
+    anime({
+      targets: bubble,
+      translateY: -20,
+      opacity: 0,
+      easing: "easeInOutExpo",
+      duration: 1000,
+      complete: () => {
+        bubble.remove();
+      }
+    });
+  }
+
+
+
