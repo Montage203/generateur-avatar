@@ -97,9 +97,4 @@ document.getElementById("updateButton").addEventListener("click", () => {
 });
 
 
-const toggleButton = document.getElementById("toggleControls");
-const controlsContainer = document.querySelector(".controls-container");
 
-toggleButton.addEventListener("click", () => {
-   controlsContainer.classList.toggle("open");
-});
