@@ -27,7 +27,7 @@ tiles.forEach(tile => {
 })
 
 
-const pseudoInput = document.getElementById("pseudoInput");
+const pseudoInput =9 document.getElementById("pseudoInput");
 const avatarImg = document.querySelector(".avatar img");
 const actionSelect = document.getElementById("actionSelect");
 const directionSelect = document.getElementById("directionSelect");
@@ -98,30 +98,4 @@ document.getElementById("updateButton").addEventListener("click", () => {
 
 
 
-const addBlockButton = document.getElementById("addBlockButton");
-addBlockButton.addEventListener("click", () => {
-  const rowInput = parseInt(document.getElementById("rowInput").value);
-  const columnInput = parseInt(document.getElementById("columnInput").value);
 
-  if (isNaN(rowInput) || isNaN(columnInput)) {
-    alert("Veuillez saisir des valeurs valides pour la ligne et la colonne.");
-    return;
-  }
-
-  if (rowInput < 1 || rowInput > 8 || columnInput < 1 || columnInput > 6) {
-    alert("Les valeurs de ligne et de colonne doivent être comprises entre 1 et 8 pour la ligne et entre 1 et 6 pour la colonne.");
-    return;
-  }
-
-  const newBlock = document.createElement("div");
-  newBlock.classList.add("block");
-  const room = document.querySelector(".room");
-  room.appendChild(newBlock);
-
-  const blockIndex = (rowInput - 1) * 6 + columnInput - 1;
-  const tiles = document.querySelectorAll(".room .block");
-  const tilePos = tiles[blockIndex].getBoundingClientRect();
-  
-  const avatar = document.querySelector(".avatar");
-  avatarToPos({ avatar, x: tilePos.left, y: tilePos.top });
-});
